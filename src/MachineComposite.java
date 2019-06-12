@@ -22,7 +22,17 @@ public class MachineComposite extends MachineComponent implements Observer {
     }
 
     public boolean isBroken() {
-        return (this.broken || this.broken_components.size() > 0);
+        if(broken){
+            return true;
+        }
+
+        for (MachineComponent mc : components){
+            if(mc.isBroken()){
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void setBroken(){

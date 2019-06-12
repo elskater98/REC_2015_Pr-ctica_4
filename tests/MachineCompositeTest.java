@@ -15,6 +15,7 @@ public class MachineCompositeTest {
     }
 
     @Test
+    @DisplayName("Simple test, add 3 Machines to Composite")
     void addComponent(){
 
         machineComposite.addComponent(new Machine());
@@ -25,6 +26,7 @@ public class MachineCompositeTest {
     }
 
     @Test
+    @DisplayName("Complex test, add Composite to another composite with different Machines")
     void addComponentComposite(){
 
         addComponent();
@@ -38,17 +40,20 @@ public class MachineCompositeTest {
     }
 
     @Test
+    @DisplayName("Simple test, check if is broken machine")
     void isBrokenSimple(){
         assertFalse(machineComposite.isBroken());
     }
 
     @Test
+    @DisplayName("Simple test, brake machine and cheack if is broken")
     void setBrokenSimple(){
        machineComposite.setBroken();
         assertTrue(machineComposite.isBroken());
     }
 
     @Test
+    @DisplayName("Complex test, broken components")
     void  setBrokenComposite(){
         Machine machine = new Machine();
         Machine machine1 = new Machine();
@@ -63,6 +68,7 @@ public class MachineCompositeTest {
     }
 
     @Test
+    @DisplayName("Simple test, repair machine")
     void repair(){
         setBrokenSimple();
         machineComposite.repair();
@@ -70,6 +76,7 @@ public class MachineCompositeTest {
     }
 
     @Test
+    @DisplayName("Complex test, broken components and repair all of them")
     void repairComposite(){
         Machine machine = new Machine();
         Machine machine1 = new Machine();

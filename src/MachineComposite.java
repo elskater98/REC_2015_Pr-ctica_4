@@ -15,8 +15,7 @@ public class MachineComposite extends MachineComponent implements Observer {
          if(mc.isBroken()){
              this.broken_components.add(mc);
              if(broken_components.size() == 1 && !this.broken){
-                 setChanged();
-                 notifyObservers();
+                 notifyChangestoObservers();
              }
          }
     }
@@ -39,8 +38,7 @@ public class MachineComposite extends MachineComponent implements Observer {
         boolean old_broken = this.broken; //save the old value
         this.broken=true; // update to the new value
         if(!old_broken){
-            setChanged();
-            notifyObservers();//PULL
+            notifyChangestoObservers();
         }
     }
 
@@ -48,8 +46,7 @@ public class MachineComposite extends MachineComponent implements Observer {
         boolean old_broken = this.broken; //save the old value
         this.broken=false; // update to the new value
         if(old_broken){
-            setChanged();
-            notifyObservers();//PULL
+            notifyChangestoObservers();
         }
     }
 
@@ -57,8 +54,7 @@ public class MachineComposite extends MachineComponent implements Observer {
         boolean old_broken = this.broken; //save the old value
         this.broken_components.add(machineComponent);
         if(!old_broken){
-            setChanged();
-            notifyObservers();//PULL
+            notifyChangestoObservers();
         }
     }
 
@@ -66,8 +62,7 @@ public class MachineComposite extends MachineComponent implements Observer {
         boolean old_broken = this.broken; //save the old value
         this.broken_components.remove(machineComponent);
         if(old_broken){
-            setChanged();
-            notifyObservers();//PULL
+            notifyChangestoObservers();
         }
     }
 

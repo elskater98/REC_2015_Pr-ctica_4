@@ -27,6 +27,7 @@ public class MachineTest {
    }
 
    @Test
+   @DisplayName("Simple test, check if works the repair of Machine")
    void repair(){
       machine.setBroken();
       assertTrue(machine.isBroken());

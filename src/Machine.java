@@ -6,8 +6,7 @@ public class Machine extends MachineComponent{
         boolean old_broken = this.broken; //save the old value
         this.broken=true; // update to the new value
         if(!old_broken){
-            setChanged();
-            notifyObservers();//PULL
+            notifyChangestoObservers();
         }
     }
 
@@ -15,8 +14,7 @@ public class Machine extends MachineComponent{
         boolean old_broken = this.broken; //save the old value
         this.broken=false; // update to the new value
         if(old_broken){
-            setChanged();
-            notifyObservers();//PULL
+            notifyChangestoObservers();
         }
     }
 

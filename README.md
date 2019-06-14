@@ -8,4 +8,4 @@ Amb aquest pratró s'ens permet observar les classes externes a la classe donada
 
 ## Apartat E: Diagrama Final
 
-![Diagrama de classes](https://github.com/elskater98/REC_2015_Pr-ctica_4/blob/master/REC%202015_2016.jpg)
+![Diagrama de classes](https://github.com/elskater98/REC_2015_Pr-ctica_4/blob/master/REC%202015_2016.png)
